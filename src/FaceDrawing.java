@@ -14,5 +14,5 @@ private edit
     this.str = str;
                 }
 
-    String toString();//Prints the face row by row
+    System.out.Println(Str toString());//Prints the face row by row
 }
