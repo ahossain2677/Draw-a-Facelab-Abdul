@@ -1,18 +1,34 @@
-public class FaceDrawing
-{
-private edit
-            {
-    void edit(String replace, int row, int column) //Edits one of the strings in the faceFeatures array
-    this.replace = replace;
-    this.row = row;
-    this.column = column;
+package com.company;
+
+public class FaceDrawing {
+    private String[][] faceFeatures;
+
+    public FaceDrawing(String[][] faceFeatures){
+        this.faceFeatures = faceFeatures;
+    }
+
+    public void fill(String str){
+        for (int x = 0; x< faceFeatures.length; x++){
+            for (int y = 0; y < faceFeatures[x].length; y++){
+                faceFeatures[x][y] = str;
             }
+        }
+    }
 
-    private fill 
-                {
-    void fill(String str)//fill the faceFeatures array with a single string.
-    this.str = str;
-                }
+    public void edit(String replace, int row, int column){
+        faceFeatures[row][column] = replace;
+    }
 
-    System.out.Println(Str toString());//Prints the face row by row
+    public String toString(){
+        String output = "";
+        for(int i = 0; i< faceFeatures.length; i++){
+            for (int n = 0; n< faceFeatures[i].length; n ++){
+                output = output + faceFeatures[i][n];
+            }
+            output+= '\n';
+        }
+        return output;
+    }
+
+
 }
